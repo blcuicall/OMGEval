@@ -4,9 +4,9 @@
 
 以ChatGPT为代表的大规模生成式预训练语言模型带动了一系列通用人工智能技术的迅速发展，伴随大模型发展的是对其性能的评测。
 
-从评测能力上来看，目前已有的数据集对大模型的评估更偏向推理而非生成，导致评估结果和模型真实能力有一定偏差。例如，英文数据集中，HELM[<sup>1</sup>](#refer-anchor-1)使用16个NLP数据集，MMLU[<sup>2</sup>](#refer-anchor-2)用57项人类考试科目来评测大模型。中文数据集中，GAOKAO[<sup>3</sup>](#refer-anchor-3)、C-Eval[<sup>4</sup>](#refer-anchor-4)等也采用人类试题，他们在自动化评测流程中都只包含有标准答案的问题，无法全面衡量生成式大模型的综合能力。
+从评测能力上来看，目前已有的数据集对大模型的评估更偏向推理而非生成，导致评估结果和模型真实能力有一定偏差。例如，英文数据集中，HELM[^1]使用16个NLP数据集，MMLU[^2]用57项人类考试科目来评测大模型。中文数据集中，GAOKAO[^3]、C-Eval[^4]等也采用人类试题，他们在自动化评测流程中都只包含有标准答案的问题，无法全面衡量生成式大模型的综合能力。
 
-此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval[<sup>5</sup>](#refer-anchor-5)被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE[<sup>6</sup>](#refer-anchor-6)数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
+此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval[^5]被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE[^6]数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
 
 综上所述，构建一个多语言的开放式问答数据集用以全面评测大模型的综合能力是有必要的。我们将从中文入手，逐渐迁移至其他语言。
 
@@ -138,27 +138,13 @@ AlpacaEval 的实验表明，榜单所采用的 GPT-4 评估与人类标注结�
 - [ ] 扩充数据集，使得数据集在评估能力分类上分布均衡
 - [ ] 扩展到多语言
 
-## 参考文献
-
-<div id="refer-anchor-1"></div>[1] Percy Liang, Rishi Bommasani, Tony Lee, Dimitris Tsipras, Dilara Soylu, Michihiro Yasunaga, Yian Zhang, Deepak Narayanan, Yuhuai Wu, Ananya Kumar, Benjamin Newman, Binhang Yuan, Bobby Yan, Ce Zhang, Christian Cosgrove, Christopher D. Manning, Christopher Ré, Diana Acosta-Navas, Drew A. Hudson, Eric Zelikman, Esin Durmus, Faisal Ladhak, Frieda Rong, Hongyu Ren, Huaxiu Yao, Jue Wang, Keshav Santhanam, Laurel Orr, Lucia Zheng, Mert Yuksekgonul, Mirac Suzgun, Nathan Kim, Neel Guha, Niladri Chatterji, Omar Khattab, Peter Henderson, Qian Huang, Ryan Chi, Sang Michael Xie, Shibani Santurkar, Surya Ganguli, Tatsunori Hashimoto, Thomas Icard, Tianyi Zhang, Vishrav Chaudhary, William Wang, Xuechen Li, Yifan Mai, Yuhui Zhang, Yuta Koreeda. 2022. Holistic Evaluation of Language Models. arXiv preprint arXiv:2211.09110.
-
-<div id="refer-anchor-2"></div>[2] Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt. 2020. Measuring Massive Multitask Language Understanding. arXiv preprint arXiv:2009.03300.
-
-<div id="refer-anchor-3"></div>[3] Xiaotian Zhang, Chunyang Li, Yi Zong, Zhengyu Ying, Liang He, Xipeng Qiu. 2023. Evaluating the Performance of Large Language Models on GAOKAO Benchmark. arXiv preprint arXiv:2305.12474.
-
-<div id="refer-anchor-4"></div>[4] Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He. 2023. C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models. arXiv preprint arXiv:2305.08322.
-
-<div id="refer-anchor-5"></div>[5] Yann Dubois, Xuechen Li, Rohan Taori, Tianyi Zhang, Ishaan Gulrajani, Jimmy Ba, Carlos Guestrin, Percy Liang, Tatsunori B. Hashimoto. 2023. AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback. arXiv preprint arXiv:2305.14387.
-
-<div id="refer-anchor-6"></div>[6] Liang Xu, Anqi Li, Lei Zhu, Hang Xue, Changtai Zhu, Kangkang Zhao, Haonan He, Xuanwei Zhang, Qiyue Kang, Zhenzhong Lan. 2023. SuperCLUE: A Comprehensive Chinese Large Language Model Benchmark. arXiv preprint arXiv:2307.15020.
-
 ## 引用
 
 如果您使用了本项目的内容，或者认为本项目对您的研究有帮助，请引用本项目。
 
 ```Plaintext
 @misc{OMGEval,
-  author={Yang Liu  and Lin Zhu and Jingsi Yu and Meng Xu and Yujie Wang and Hongxiang Chang and Cunliang Kong and Jiyuan An and Tianlin Yang and Shuo Wang and Zhenghao Liu and Yun Chen and Erhong Yang and Yang Liu and Maosong Sun},
+  author={Yang Liu  and Lin Zhu and Jingsi Yu and Meng Xu and Yujie Wang and Hongxiang Chang and Jiaxin Yuan and Cunliang Kong and Jiyuan An and Tianlin Yang and Shuo Wang and Zhenghao Liu and Yun Chen and Erhong Yang and Yang Liu and Maosong Sun},
   title={OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Foundation Models},
   year={2023},
   publisher={GitHub},
@@ -166,3 +152,19 @@ AlpacaEval 的实验表明，榜单所采用的 GPT-4 评估与人类标注结�
   howpublished={\url{https://github.com/blcuicall/OMGEval}},
 }
 ```
+
+**参考文献**
+
+[^1]: Percy Liang, Rishi Bommasani, Tony Lee, Dimitris Tsipras, Dilara Soylu, Michihiro Yasunaga, Yian Zhang, Deepak Narayanan, Yuhuai Wu, Ananya Kumar, Benjamin Newman, Binhang Yuan, Bobby Yan, Ce Zhang, Christian Cosgrove, Christopher D. Manning, Christopher Ré, Diana Acosta-Navas, Drew A. Hudson, Eric Zelikman, Esin Durmus, Faisal Ladhak, Frieda Rong, Hongyu Ren, Huaxiu Yao, Jue Wang, Keshav Santhanam, Laurel Orr, Lucia Zheng, Mert Yuksekgonul, Mirac Suzgun, Nathan Kim, Neel Guha, Niladri Chatterji, Omar Khattab, Peter Henderson, Qian Huang, Ryan Chi, Sang Michael Xie, Shibani Santurkar, Surya Ganguli, Tatsunori Hashimoto, Thomas Icard, Tianyi Zhang, Vishrav Chaudhary, William Wang, Xuechen Li, Yifan Mai, Yuhui Zhang, Yuta Koreeda. 2022. Holistic Evaluation of Language Models. arXiv preprint arXiv:2211.09110.
+
+[^2]: Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt. 2020. Measuring Massive Multitask Language Understanding. arXiv preprint arXiv:2009.03300.
+
+[^3]: Xiaotian Zhang, Chunyang Li, Yi Zong, Zhengyu Ying, Liang He, Xipeng Qiu. 2023. Evaluating the Performance of Large Language Models on GAOKAO Benchmark. arXiv preprint arXiv:2305.12474.
+
+[^4]: Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He. 2023. C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models. arXiv preprint arXiv:2305.08322.
+
+[^5]: Yann Dubois, Xuechen Li, Rohan Taori, Tianyi Zhang, Ishaan Gulrajani, Jimmy Ba, Carlos Guestrin, Percy Liang, Tatsunori B. Hashimoto. 2023. AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback. arXiv preprint arXiv:2305.14387.
+
+[^6]: Liang Xu, Anqi Li, Lei Zhu, Hang Xue, Changtai Zhu, Kangkang Zhao, Haonan He, Xuanwei Zhang, Qiyue Kang, Zhenzhong Lan. 2023. SuperCLUE: A Comprehensive Chinese Large Language Model Benchmark. arXiv preprint arXiv:2307.15020.
+
+
