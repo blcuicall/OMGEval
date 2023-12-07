@@ -1,10 +1,11 @@
 # OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Foundation Models
+<div align="center"><img src="./figures/omgeval_logo.png" width="450px"></div>
 
 ## 背景
 
-以ChatGPT为代表的大规模生成式预训练语言模型带动了一系列通用人工智能技术的迅速发展，伴随大模型发展的是对其性能的评测。
+近一年，大模型发展迅速，带动了⼀系列通用人工智能技术的迅速发展，对大模型性能的评测随之涌现。
 
-从评测能力上来看，目前已有的数据集对大模型的评估更偏向推理而非生成，导致评估结果和模型真实能力有一定偏差。例如，英文数据集中，HELM[^1]使用16个NLP数据集，MMLU[^2]用57项人类考试科目来评测大模型。中文数据集中，GAOKAO[^3]、C-Eval[^4]等也采用人类试题，他们在自动化评测流程中都只包含有标准答案的问题，无法全面衡量生成式大模型的综合能力。
+从评测能力上来看，由于目前的评测数据集主要是利用人类试题及其标准答案进行评测，这种评价方式更偏向对推理能力的评估，存在评估结果和模型真实能力有⼀定偏差。例如，英文数据集中，HELM[^1]使用16个NLP数据集，MMLU[^2]用57项人类考试科目来评测大模型。中文数据集中，GAOKAO[^3]、C-Eval[^4]等也采用人类试题，他们在自动化评测流程中都只包含有标准答案的问题，无法全面衡量生成式大模型的综合能力。
 
 此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval[^5]被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE[^6]数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
 
@@ -166,5 +167,4 @@ AlpacaEval 的实验表明，榜单所采用的 GPT-4 评估与人类标注结�
 [^5]: Yann Dubois, Xuechen Li, Rohan Taori, Tianyi Zhang, Ishaan Gulrajani, Jimmy Ba, Carlos Guestrin, Percy Liang, Tatsunori B. Hashimoto. 2023. AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback. arXiv preprint arXiv:2305.14387.
 
 [^6]: Liang Xu, Anqi Li, Lei Zhu, Hang Xue, Changtai Zhu, Kangkang Zhao, Haonan He, Xuanwei Zhang, Qiyue Kang, Zhenzhong Lan. 2023. SuperCLUE: A Comprehensive Chinese Large Language Model Benchmark. arXiv preprint arXiv:2307.15020.
-
 
