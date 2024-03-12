@@ -152,7 +152,6 @@ AlpacaEval 的实验表明，榜单所采用的 GPT-4 评估与人类标注结�
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
-}
 ```
 
 **参考文献**
