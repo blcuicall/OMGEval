@@ -9,7 +9,7 @@
 
 此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval[^5]被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE[^6]数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
 
-综上所述，构建一个多语言的开放式问答数据集用以全面评测大模型的综合能力是有必要的。我们将从中文入手，逐渐迁移至其他语言。
+综上所述，构建一个多语言的开放式问答数据集用以全面评测大模型的综合能力是有必要的。目前我们已发布中文、法语、俄语、西班牙语、阿拉伯语五种语言的开放式问答数据集。后续我们将逐渐迁移至其他多种语言。
 
 ## 介绍
 
@@ -144,13 +144,14 @@ AlpacaEval 的实验表明，榜单所采用的 GPT-4 评估与人类标注结�
 如果您使用了本项目的内容，或者认为本项目对您的研究有帮助，请引用本项目。
 
 ```Plaintext
-@misc{OMGEval,
-  author={Yang Liu  and Lin Zhu and Jingsi Yu and Meng Xu and Yujie Wang and Hongxiang Chang and Jiaxin Yuan and Cunliang Kong and Jiyuan An and Tianlin Yang and Shuo Wang and Zhenghao Liu and Yun Chen and Erhong Yang and Yang Liu and Maosong Sun},
-  title={OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Foundation Models},
-  year={2023},
-  publisher={GitHub},
-  journal={GitHub repository},
-  howpublished={\url{https://github.com/blcuicall/OMGEval}},
+@misc{liu2024omgeval,
+      title={OMGEval: An Open Multilingual Generative Evaluation Benchmark for Large Language Models}, 
+      author={Yang Liu and Meng Xu and Shuo Wang and Liner Yang and Haoyu Wang and Zhenghao Liu and Cunliang Kong and Yun Chen and Yang Liu and Maosong Sun and Erhong Yang},
+      year={2024},
+      eprint={2402.13524},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 }
 ```
 
