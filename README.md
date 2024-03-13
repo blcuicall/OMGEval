@@ -1,4 +1,4 @@
-# OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Foundation Models
+# OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Large Language Models
 <div align="center"><img src="./figures/omgeval_logo.png" width="450px"></div>
 
 ## 背景
@@ -13,7 +13,7 @@
 
 ## 介绍
 
-多语言开放式问答数据集(OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Foundation Models)由北京语言大学、清华大学、东北大学、上海财经大学等高校组成的团队共同发布。主要项目参与人员有刘洋、朱琳、余婧思、徐萌、王誉杰、常鸿翔、袁佳欣、孔存良、安纪元、杨天麟、王硕、刘正皓、陈云、杨尔弘、刘洋、孙茂松等。
+多语言开放式问答数据集(OMGEval😮: An Open Multilingual Generative Evaluation Benchmark for Large Language Models)由北京语言大学、清华大学、东北大学、上海财经大学等高校组成的团队共同发布。主要项目参与人员有刘洋、朱琳、余婧思、徐萌、王誉杰、常鸿翔、袁佳欣、孔存良、安纪元、杨天麟、王硕、刘正皓、陈云、杨尔弘、刘洋、孙茂松等。
 
 ## 数据集构建过程
 
