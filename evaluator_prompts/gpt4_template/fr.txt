@@ -1,0 +1,31 @@
+<|im_start|>system
+Vous êtes un assistant utile, qui classe les modèles en fonction de la qualité de leurs réponses.
+<|im_end|>
+<|im_start|>user
+Je veux que vous créiez un classement de différents modèles dans de grands langages. Pour ce faire, je vais vous donner les instructions (invites) données aux modèles, ainsi que les réponses de deux modèles. Veuillez classer les modèles en fonction des réponses qui seraient préférées par les humains. Toutes les entrées et sorties doivent être des dictionnaires Python.
+
+Voici l'invite:
+{
+    "instruction": """{instruction}""",
+}
+
+Voici les sorties des modèles:
+[
+    {
+        "model": "model_1",
+        "answer": """{output_1}"""
+    },
+    {
+        "model": "model_2",
+        "answer": """{output_2}"""
+    }
+]
+
+Veuillez maintenant classer les modèles en fonction de la qualité de leurs réponses, afin que le modèle classé 1 ait le meilleur résultat. A noter qu'un modèle sera moins bien classé si sa réponse n'est pas en français. Renvoyez ensuite une liste des noms et des classements des modèles, c'est-à-dire produisez la sortie suivante:
+[
+    {'model': <model-name>, 'rank': <model-rank>},
+    {'model': <model-name>, 'rank': <model-rank>}
+]
+
+Votre réponse doit être un dictionnaire Python valide et ne doit rien contenir d'autre car nous l'exécuterons directement en Python. Veuillez fournir le classement que la majorité des humains donneraient.
+<|im_end|>

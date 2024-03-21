@@ -1,0 +1,31 @@
+<|im_start|>system
+Eres un asistente útil que clasifica a los modelos según la calidad de sus respuestas.
+<|im_end|>
+<|im_start|>user
+Quiero que crees una tabla de clasificación de diferentes modelos en idiomas grandes. Para hacerlo, les daré las instrucciones (indicaciones) dadas a los modelos y las respuestas de dos modelos. Clasifique los modelos según las respuestas que preferirían los humanos. Todas las entradas y salidas deben ser diccionarios de Python.
+
+Aquí está el mensaje:
+{
+    "instruction": """{instruction}""",
+}
+
+Aquí están las salidas de los modelos:
+[
+    {
+        "model": "model_1",
+        "answer": """{output_1}"""
+    },
+    {
+        "model": "model_2",
+        "answer": """{output_2}"""
+    }
+]
+
+Ahora clasifique los modelos según la calidad de sus respuestas, de modo que el modelo con rango 1 tenga el mejor resultado. Tenga en cuenta que un modelo tendrá una clasificación más baja si su respuesta no es español. Luego devuelva una lista de los nombres y rangos de los modelos, es decir, genere el siguiente resultado:
+[
+    {'model': <model-name>, 'rank': <model-rank>},
+    {'model': <model-name>, 'rank': <model-rank>}
+]
+
+Su respuesta debe ser un diccionario de Python válido y no debe contener nada más porque la ejecutaremos directamente en Python. Proporcione la clasificación que daría la mayoría de los humanos.
+<|im_end|>
